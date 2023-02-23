@@ -12,12 +12,13 @@ body{
   padding: 1rem;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 /* Contenedor de toda la todo list */
 .todo-container{
+  margin-top: 2rem;
   background-color:#2525258f;
   padding: 1rem;
   box-shadow: 1px 2px 45px #ffffff14;
