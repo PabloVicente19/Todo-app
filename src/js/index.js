@@ -4,7 +4,7 @@ const taskBtn = document.getElementById('btn');
 const taskContainer = document.querySelector('.task-container');
 const removeAll = document.querySelector('.btn-removeAll');
 
-  // Obtener dato del input
+// Obtener dato del input
 const createTask = (even) => {
   even.preventDefault(even);
 
@@ -16,7 +16,6 @@ const createTask = (even) => {
     return showError( " ¡Existe una tarea con ese nombre! ");
   } else{
     addTask(taskName);
-    form.reset(form);
   }
   form.reset(form);
 }
