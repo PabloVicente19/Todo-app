@@ -16,16 +16,20 @@ const createTask = (even) => {
     return showError( " ¡Existe una tarea con ese nombre! ");
   } else{
     addTask(taskName);
+
   }
+  showBtn(task)
   form.reset(form);
 }
 
-
 const init = () => {
+
   renderCard(task);
   form.addEventListener('submit', createTask)
   taskContainer.addEventListener('click', deleteTask)
-  removeAll.addEventListener('click',removeAllTasks )
+  removeAll.addEventListener('click', removeAllTasks )
   taskInput.addEventListener('click', deleteTextInInput)
+  showBtn(task)
+
 }
 init()

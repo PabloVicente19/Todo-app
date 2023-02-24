@@ -38,6 +38,8 @@ const deleteTask = (e) => {
 
   renderCard(task)
   saveLocalStorage(task)
+  showBtn(task)
+
 }
 
 // Remover el texto dentro del atributo placeholder del input
