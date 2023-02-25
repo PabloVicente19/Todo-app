@@ -15,13 +15,29 @@
     <h1 class="todo-title">Todo App</h1>
     <form class="todo-form" id="form">
       <input type="text" class="todo-input " id="input" placeholder="Ingrese una Tarea">
+      <!-- <div class="task-container"></div> -->
       <button class="todo-btn" id="btn">Agregar</button>
     </form>
-    <div class="task-container"></div>
     <button class="btn-removeAll hidden">Eliminar Todas las tareas</button>
   </div>
-    <script src="./src/js/utils.js"></script>
-    <script src="./src/js/app.js"></script>
-    <script src="./src/js/index.js"></script>
+  <!-- Nuevo Diseño -->
+  <div class="new-task-container">
+    <section class="new-task-created">
+      <div class="new-task-title">
+        <h2>Tareas Creadas</h2>
+      </div>
+      <div class="tasks-created">
+        
+      </div>
+    </section>
+    <section class="new-task-complete">
+      <div class="new-task-title">
+        <h2>Tareas Creadas</h2>
+      </div>
+    </section>
+  </div>
+  <script src="./src/js/utils.js"></script>
+  <script src="./src/js/app.js"></script>
+  <script src="./src/js/index.js"></script>
 </body>
 </html>

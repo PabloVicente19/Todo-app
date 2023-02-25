@@ -1,7 +1,7 @@
 const form = document.getElementById('form');
 const taskInput = document.getElementById('input');
 const taskBtn = document.getElementById('btn');
-const taskContainer = document.querySelector('.task-container');
+const taskContainer = document.querySelector('.tasks-created');
 const removeAll = document.querySelector('.btn-removeAll');
 
 // Obtener dato del input

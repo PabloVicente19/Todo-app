@@ -10,7 +10,14 @@ const createCard = (task) => {
 const {name, id } = task;
 return`<div class="task-content">
 <span class="task-name">${name}</span>
-<button class="task-delete" data-id=${id}><i class="fa-solid fa-trash task-delete-icon"></i></button>
+  <div class="btns-container">
+    <button class="task-delete" data-id=${id}>
+      <i class="fa-solid fa-trash task-delete-icon"></i>
+    </button>
+    <button class="task-delete" data-id=${id}>
+      <i class="fa-solid fa-check"></i>
+    </button>
+  </div>
 </div> `
 }
 

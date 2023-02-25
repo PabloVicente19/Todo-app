@@ -12,13 +12,15 @@ body{
   padding: 1rem;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  justify-content: space-evenly;
   flex-direction: column;
   flex-wrap: wrap;
 }
 /* Contenedor de toda la todo list */
 .todo-container{
-  margin-top: 2rem;
+  min-height: 50%;
+  flex-basis: 100%;
+  margin-top: 1rem;
   background-color:#2525258f;
   padding: 1rem;
   box-shadow: 1px 2px 45px #ffffff14;
@@ -66,8 +68,8 @@ body{
 
 /* Seccion de tareas */
 .task-content{
-  padding: 0rem 1rem;
-  margin: .3rem auto;
+  padding: .5rem 1rem;
+  margin: .7rem;
   min-height: 40px;
   display: flex;
   justify-content: space-between;
@@ -94,7 +96,6 @@ body{
 .btn-removeAll{
   margin: 1.5rem auto;
   margin-top: 2rem;
-
   display: flex;
   padding: .6rem 2rem;
   border-radius: .6rem;
@@ -116,4 +117,30 @@ body{
 }
 .hidden{
   display: none;
+}
+
+/* Nuevo diseño */
+.new-task-container{
+  width: 100%;
+  margin: .5rem auto;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+}
+
+.new-task-created{
+  width: 50%;
+  background-color: #2525258f;
+}
+
+.new-task-title{
+  color: aliceblue;
+  text-align: center;
+  margin-top: .5rem;
+}
+
+.new-task-complete{
+  background-color: #2525258f;
+  width: 50%;
 }
