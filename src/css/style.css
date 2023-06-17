@@ -5,19 +5,44 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
-html{
-  background-color: #282C31;
+:root{
+  --bgPrimary: #252525;
+  --fontPoppins: "Poppins", sans-serif
 }
+
 body{
-  padding: 1rem;
-  min-height: 100vh;
+  max-width: 1024px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
+  background-color: var(--bgPrimary);
+}
+.todo-header{
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-bottom: 1px solid white;
+}
+.todo-title{
+  font-family: var(--fontPoppins);
+  color: aliceblue;
+  font-size: 2.5rem;
+}
+/* Todo Main */
+.todo-main{
+  min-height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-form{
+  display: flex;
+  gap: 1rem;
 }
 /* Contenedor de toda la todo list */
-.todo-container{
+/* .todo-container{
   margin-top: 2rem;
   background-color:#2525258f;
   padding: 1rem;
@@ -62,10 +87,10 @@ body{
   border-radius: .5rem;
   background: linear-gradient( 45deg, rgb(68 29 223 / 98%), rgb(51 149 229 / 50%));
   box-shadow: 1px 2px 15px rgba(0,0,0,0.3);
-}
+} */
 
 /* Seccion de tareas */
-.task-content{
+/* .task-content{
   padding: 0rem 1rem;
   margin: .3rem auto;
   min-height: 40px;
@@ -108,12 +133,12 @@ body{
 }
 .btn-removeAll:hover{
   background-color: rgba(255, 0, 0, 0.687);
-}
+} */
 
 /* Estilo para Cuando se envia el formulario y el input esta vacio */
-.empty{
+/* .empty{
   outline:1.8px red solid;
 }
 .hidden{
   display: none;
-}
+} */

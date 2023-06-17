@@ -11,17 +11,28 @@
   <title>Todo List</title>
 </head>
 <body>
-  <div class="todo-container">
+  <header class="todo-header">
     <h1 class="todo-title">Todo App</h1>
+  </header>
+  <main class="todo-main">
+    <form class="todo-form" id="form">
+      <label for="task">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="todo-input" id="task">
+      </label>
+      <button class="todo-btn-submit">Agregar</button>
+    </form>
+  </main>
+  <!-- <main class="todo-container">
     <form class="todo-form" id="form">
       <input type="text" class="todo-input " id="input" placeholder="Ingrese una Tarea">
       <button class="todo-btn" id="btn">Agregar</button>
     </form>
     <div class="task-container"></div>
     <button class="btn-removeAll hidden">Eliminar Todas las tareas</button>
-  </div>
-    <script src="./src/js/utils.js"></script>
-    <script src="./src/js/app.js"></script>
-    <script src="./src/js/index.js"></script>
+  </main> -->
+    <!-- <script src="./src/js/utils.js"></script> -->
+    <!-- <script src="./src/js/app.js"></script> -->
+    <!-- <script src="./src/js/index.js"></script> -->
 </body>
 </html>
