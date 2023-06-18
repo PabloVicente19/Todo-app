@@ -1,35 +1,33 @@
-const form = document.getElementById('form');
-const taskInput = document.getElementById('input');
-const taskBtn = document.getElementById('btn');
-const taskContainer = document.querySelector('.task-container');
-const removeAll = document.querySelector('.btn-removeAll');
+const $form = document.getElementById('form');
+const $taskInput = document.getElementById('task');
+const $taskCoontainer = document.querySelector('.task-list-container');
 
-// Obtener dato del input
-const createTask = (even) => {
-  even.preventDefault(even);
+// Variable que que almecena las tasks;
+let task = JSON.parse(localStorage.getItem('tasks')) || [];
 
-  const taskName = taskInput.value.trim();
-
-  if( isEmpty(taskName) ){
-    return showError( "¡Ingrese una tarea! ");
-  } else if( checkEqualTask(task, taskName) ){
-    return showError( " ¡Existe una tarea con ese nombre! ");
-  } else{
-    addTask(taskName);
-
-  }
-  showBtn(task)
-  form.reset(form);
+// Funcion que almacena en LS:
+const saveLocalStorage = (taskList) => {
+   return localStorage.setItem('tasks', JSON.stringify(taskList))
 }
 
-const init = () => {
-
-  renderCard(task);
-  form.addEventListener('submit', createTask)
-  taskContainer.addEventListener('click', deleteTask)
-  removeAll.addEventListener('click', removeAllTasks )
-  taskInput.addEventListener('click', deleteTextInInput)
-  showBtn(task)
-
+// Creo la card de la tarea
+const createTaskCard = (tasks) => {
+  const {name} = tasks;
+  return `<li> ${name} </li>`
 }
-init()
+
+// funcion para renderizal las tareas
+const renderCards = (container,task) => {
+  return container.innerHTML += task.map(createTaskCard).join("");
+}
+
+$form.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  let taskName = $taskInput.value.trim();
+  
+  task = [...task, {name: taskName}]
+  
+  console.log(taskName);
+  console.log(task);
+})
