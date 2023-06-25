@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./src/images/icon.png" type="image/x-icon">
   <!-- Css -->
   <link rel="stylesheet" href="./src/css/style.css">
   <!-- Font Awesome -->
@@ -11,17 +13,21 @@
   <title>Todo List</title>
 </head>
 <body>
-  <div class="todo-container">
+  <header class="todo-header">
     <h1 class="todo-title">Todo App</h1>
+  </header>
+  <main class="todo-main">
     <form class="todo-form" id="form">
-      <input type="text" class="todo-input " id="input" placeholder="Ingrese una Tarea">
-      <button class="todo-btn" id="btn">Agregar</button>
+      <label for="task">
+        <i class="fa-solid fa-magnifying-glass icon-lens"></i>
+        <input type="text" class="todo-input" id="task" placeholder="Ingrese una tarea">
+      </label>
+      <button class="todo-btn-submit">Agregar </button>
     </form>
-    <div class="task-container"></div>
-    <button class="btn-removeAll hidden">Eliminar Todas las tareas</button>
-  </div>
-    <script src="./src/js/utils.js"></script>
-    <script src="./src/js/app.js"></script>
-    <script src="./src/js/index.js"></script>
-</body>
+    <ul class="task-list-container">
+    </ul>
+  </main>
+   <script src="./src/js/app.js"></script> 
+    <script src="./src/js/index.js"></script> 
+  </body>
 </html>
